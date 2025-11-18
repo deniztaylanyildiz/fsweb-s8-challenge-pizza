@@ -1,4 +1,4 @@
-// src/Home.jsx
+
 import React from 'react';
 
 function Home() {
