@@ -1,45 +1,31 @@
-// src/App.jsx
-import React from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import React from "react";
 
-// 1. Componentleri içeri aktar
-import Home from './Home';
-import OrderForm from './OrderForm';
-import Success from './Success';
-
-// Proje İpucu: Sayfalar arası veri taşıma için state burada tanımlanacak (Prop-Lifting)
-// IT2'de bu kısım önemli olacak.
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import OrderForm from "./OrderForm";
+import Success from "./Success";
+import NotReady from "./NotReady";
+import Home from "./Home";
 
 function App() {
   return (
-    // 2. Uygulamayı Router ile sarmala
     <Router>
-      <div className="App">
-        {/* Navigasyon çubuğu (Sayfalar arası gezinme linkleri) */}
-        <nav>
-          <Link to="/">Anasayfa</Link>
-          <Link to="/order">Sipariş Ver</Link>
-        </nav>
-
-        {/* 3. Switch, tarayıcı URL'sine göre doğru Component'i render eder */}
-        <Switch>
-          
-          {/* Sipariş Onay Sayfası */}
-          <Route path="/success">
-            <Success />
-          </Route>
-
-          {/* Sipariş Formu Sayfası */}
-          <Route path="/order">
-            <OrderForm />
-          </Route>
-
-          {/* Anasayfa (Route path="/" her zaman sona konur) */}
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
-      </div>
+      <Switch>
+        {/* Home'un rotası  */}
+        <Route path="/" exact>
+          <Home />
+        </Route>
+        <Route path="/order">
+          {/* OrderForm bileşeni çağrılır */}
+          <OrderForm />
+        </Route>
+        <Route path="/success">
+          {/* Success bileşeni çağrılır */}
+          <Success />
+        </Route>
+        <Route path="/not-ready">
+          <NotReady />
+        </Route>
+      </Switch>
     </Router>
   );
 }

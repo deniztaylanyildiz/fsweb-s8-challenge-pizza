@@ -1,0 +1,670 @@
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+  color: #222;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/*header*/
+.hero {
+  width: 100vw;
+  min-height: 600px;
+  background-color: #DB2B2B;
+  background-image: url('images/home-banner.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.tagline {
+  font-style: italic;
+  font-size: 18px;
+  color: #ffeb3b;
+}
+
+.main-title {
+  font-size: 42px;
+  line-height: 1.3;
+  font-weight: 700;
+  margin: 20px 0;
+}
+
+.cta-btn {
+  background-color: #ffeb3b;
+  color: #000;
+  padding: 12px 30px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.cta-btn:hover {
+  background-color: #fff;
+  cursor: pointer; 
+}
+
+/*Bodymiddle*/
+.category-bar {
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  padding: 15px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.categories {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.category-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #444;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.category-item img {
+  width: 35px;
+  height: 35px;
+  margin-bottom: 8px;
+}
+
+.category-item:hover {
+  color: #c62828;
+  transform: translateY(-3px);
+}
+
+
+.specials {
+  padding: 60px 20px;
+  background-color: #fafafa;
+}
+
+.specials-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.special-card {
+  position: relative;
+  border-radius: 12px;
+  color: white;
+  overflow: hidden;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right center;
+}
+
+.red-card {
+  background-color: #c62828;
+  background-image: url('images/kart-1.png');
+}
+
+.dark-card {
+  background-color: #212121;
+  background-image: url('images/kart-2.png');
+}
+
+.light-card {
+  background-color: #fff8e1;
+  background-image: url('images/kart-3.png');
+  color: #333;
+  background-size: contain;
+  background-position: right bottom;
+}
+
+.special-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+}
+
+.light-card::before {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.special-card > * {
+  position: relative;
+  z-index: 2;
+}
+
+.special-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.text h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.text p {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  background-color: #ffeb3b;
+  color: #000;
+  font-weight: 600;
+  padding: 10px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #fff;
+}
+
+.btn.small {
+  padding: 8px 18px;
+  font-size: 14px;
+}
+
+/*bodymiddlealt*/
+.menu-section {
+  padding: 80px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.section-subtitle {
+  color: #c62828;
+  font-style: italic;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.section-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.menu-categories {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.menu-categories button {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  padding: 8px 20px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.menu-categories button.active,
+.menu-categories button:hover {
+  background-color: #c62828;
+  color: #fff;
+  border-color: #c62828;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.menu-item {
+  background-color: #fafafa;
+  border-radius: 12px;
+  padding: 20px;
+  transition: 0.3s;
+}
+
+.menu-item:hover {
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  transform: translateY(-5px);
+}
+
+.menu-item img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.price {
+  font-weight: 600;
+  color: #c62828;
+}
+
+
+/*Footer*/
+.footer {
+ background-color: #111;
+ color: #ddd;
+ padding: 60px 20px 30px;
+}
+
+.footer-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+ gap: 40px; 
+ max-width: 1100px;
+ margin: 0 auto;
+}
+
+.footer-col {
+    margin-bottom: 20px; 
+}
+
+.footer-col h3,
+.footer-col h4 {
+ color: #fff;
+ margin-bottom: 15px;
+ font-weight: 700;
+}
+
+
+.footer-col a {
+ color: #ccc;
+ text-decoration: none;
+  display: flex; 
+  align-items: center; 
+  gap: 10px; 
+  margin-bottom: 8px; 
+  font-size: 15px; 
+}
+
+.footer-col a:hover {
+ color: #ffeb3b;
+}
+
+.insta-grid {
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ gap: 8px;
+}
+
+.insta-grid img {
+ width: 100%;
+ border-radius: 6px;
+}
+@media (max-width: 600px) {
+    
+    
+    .footer {
+        padding: 40px 15px 20px; 
+    }
+    
+    .footer-grid {
+        gap: 30px; 
+    }
+    
+    .footer-col h3,
+    .footer-col h4 {
+        font-size: 20px; 
+    }
+}
+
+@media (max-width: 992px) {
+  .specials-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 60px 20px;
+  }
+
+  .main-title {
+    font-size: 26px;
+  }
+
+  .cta-btn {
+    font-size: 14px;
+  }
+}
+/* src/style.css - YENİ EKLENECEK KISIM: Form Alanları Stilleri */
+
+.form-section {
+    padding: 40px 0;
+    background-color: #FAF7F2; /* Bej */
+}
+
+.form-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 900px;
+}
+
+.form-group {
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.form-group h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #292929;
+}
+
+.required {
+    color: #CE2829; /* Kırmızı */
+    font-size: 1.2em;
+    margin-left: 5px;
+}
+
+.optional {
+    font-weight: 400;
+    font-size: 14px;
+    color: #5F5F5F;
+}
+
+/* Boyut ve Hamur Grubu */
+.size-crust-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.radio-options label {
+    display: block;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.radio-options input[type="radio"] {
+    margin-right: 8px;
+    accent-color: #CE2829;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+/* Ek Malzemeler Grubu */
+.checkbox-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.checkbox-options label {
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.checkbox-options input[type="checkbox"] {
+    margin-right: 8px;
+    accent-color: #CE2829;
+}
+
+.checkbox-options input[type="checkbox"]:disabled + label {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Özel Not ve Özet Grubu */
+.notes-summary-group {
+    display: grid;
+    grid-template-columns: 2fr 1.5fr;
+    gap: 30px;
+    align-items: start;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+/* Sipariş Özeti */
+.summary-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+}
+
+.order-total h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.total-lines p, .total-lines h3 {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.total-lines h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #CE2829;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+    margin-top: 10px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px 0;
+    margin-top: 20px;
+    font-size: 18px;
+    border: none;
+}
+
+/* Responsive Düzenlemeler */
+@media (max-width: 768px) {
+    .size-crust-group,
+    .notes-summary-group,
+    .checkbox-options {
+        grid-template-columns: 1fr;
+    }
+
+    .form-grid {
+        gap: 20px;
+    }
+}
+/* src/style.css - Kullanıcı Adı Input'u stili (Önceki adımdan kaldı) */
+
+.user-name-group input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+/* GÜNCELLENMİŞ SİPARİŞ BAŞLIK/BREADCRUMB STİLLERİ (Son Hali) */
+
+.header-order {
+    background-color: #CE2829; /* Kırmızı */
+    padding: 20px 0 10px; 
+    
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    position: relative;
+    overflow: hidden; /* Resimlerin dışarı taşmasını engeller */
+}
+
+.header-order .container {
+    z-index: 10; 
+    text-align: center; 
+}
+
+/* Yazı Okunurluğu Düzeltmeleri */
+.header-order .breadcrumb,
+.header-order .breadcrumb a,
+.header-order .page-title,
+.header-order .pizza-info p,
+.header-order .pizza-info .comment-count,
+.header-order .description { 
+    color: white !important; /* Tüm yazı renklerini beyaza çevirir */
+}
+
+.header-order .breadcrumb a:hover {
+    color: #FDC913 !important; /* Sarı (Vurgu) */
+}
+
+/* Resim Dekorasyon Stilleri */
+.pizza-dekor {
+    position: absolute;
+    width: 200px; /* Biraz daha büyük yapıldı */
+    max-height: 100%;
+    object-fit: contain; /* Resmin bozulmadan sığmasını sağlar */
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+    opacity: 0.8; 
+}
+
+.pizza-dekor.sol {
+    left: 0; /* Sol kenara sıfırlandı */
+}
+
+.pizza-dekor.sag {
+    right: 0; /* Sağ kenara sıfırlandı */
+    transform: translateY(-50%) scaleX(-1); /* Y ekseninde aynalanarak yönü değiştirildi */
+}
+
+/* Mobil uyum: Küçük ekranlarda resimleri tamamen gizle */
+@media (max-width: 992px) {
+    .pizza-dekor {
+        display: none;
+    }
+}
+/* GÜNCELLENMİŞ SİPARİŞ BAŞLIK/BREADCRUMB STİLLERİ (Son Hali) */
+
+.header-order {
+    background-color: #CE2829; /* Kırmızı */
+    padding: 20px 0 10px; 
+    
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.header-order .container {
+    z-index: 10; 
+    text-align: center; 
+}
+
+/* Yazı Okunurluğu Düzeltmeleri */
+.header-order .breadcrumb,
+.header-order .breadcrumb a,
+.header-order .page-title,
+.header-order .pizza-info p,
+.header-order .pizza-info .comment-count,
+.header-order .description { 
+    color: white !important; /* Tüm yazı renklerini beyaza çevirir */
+}
+
+.header-order .breadcrumb a:hover {
+    color: #FDC913 !important; /* Sarı (Vurgu) */
+}
+
+/* Resim Dekorasyon Stilleri */
+.pizza-dekor {
+    position: absolute;
+    width: 200px;
+    max-height: 100%;
+    object-fit: contain; 
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+    opacity: 0.8; 
+}
+
+.pizza-dekor.sol {
+    left: 0; 
+}
+
+.pizza-dekor.sag {
+    right: 0; 
+    transform: translateY(-50%) scaleX(-1); /* Yönü değiştirildi */
+}
+
+/* Mobil uyum: Küçük ekranlarda resimleri gizle */
+@media (max-width: 992px) {
+    .pizza-dekor {
+        display: none;
+    }
+}
+
+/* Ana stil dosyanız (App.css veya index.css) */
+
+/* 1. Sadece 'disabled' olmayan butonlar için hover stilini uygula */
+.cta-btn:not([disabled]):hover {
+    background-color: #fff; /* Sizin belirlediğiniz hover rengi */
+    cursor: pointer;
+}
+
+/* 2. 'disabled' durumundaki butonlar için görünüm (Hover'ı engellemek için kritik) */
+.cta-btn:disabled {
+    opacity: 0.6; /* Soluk görünüm */
+    cursor: not-allowed; /* İşaretçiyi yasak işareti yap */
+    /* Hover olunca rengin değişmesini engellemek için, hover stilini yukarıdaki kurala devrettik. */
+}
+
+
+/* Success sayfası arka planı */
+.success-section {
+    background-color: #CE2829; /* Teknolojik Yemekler Kırmızısı */
+    min-height: 60vh;
+}
